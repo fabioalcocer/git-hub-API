@@ -1,0 +1,388 @@
+@import "resets", "variables";
+
+body {
+  background-color: $light-mode-background;
+  color: $light-mode-text;
+  margin: 0 auto;
+  width: 90%;
+  transition: 1s ease-in-out;
+}
+
+// ============
+// header
+// ============
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.9375rem;
+  margin-bottom: 2.25rem;
+
+  h1 {
+    font-size: 1.625rem;
+    color: $light-mode-header;
+  }
+
+  .theme__container {
+    cursor: pointer;
+
+    .dark,
+    .light {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      font-weight: 700;
+    }
+
+    .light {
+      display: none;
+    }
+
+    .light:hover {
+      color: $light-mode-grey-text;
+      transition: 0.2s ease-in-out;
+    }
+
+    .light:hover > .sun g {
+      fill: $light-mode-grey-text;
+      transition: 0.2s ease-in-out;
+    }
+
+    .dark:hover {
+      color: $light-mode-header;
+      transition: 0.2s ease-in-out;
+    }
+
+    .dark:hover > .moon path {
+      fill: $light-mode-header;
+      transition: 0.2s ease-in-out;
+    }
+  }
+}
+
+// ============
+// search
+// ============
+
+.container {
+  background: $light-mode-container;
+  box-shadow: 0px 6px 9px 0px hsl(219, 48%, 89%);
+}
+
+.search__bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 4.3125rem;
+  border-radius: 15px;
+  padding: 0 0.5em 0 1em;
+  margin-bottom: 1rem;
+  position: relative;
+
+  ::placeholder,
+  ::-moz-placeholder {
+    color: $light-mode-text;
+    opacity: 1;
+  }
+
+  img {
+    padding-right: 0.559375em;
+  }
+
+  label {
+    width: 100%;
+    position: relative;
+  }
+
+  input {
+    background-color: $light-mode-container;
+    font-family: inherit;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: $light-mode-header;
+    cursor: pointer;
+  }
+
+  button {
+    background-color: $button;
+    color: $white;
+    border: none;
+    outline: none;
+    padding: 1em;
+    font-family: inherit;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 0.3rem;
+  }
+
+  button:hover {
+    background-color: $button-hover;
+    transition: 0.2s ease-in-out;
+  }
+
+  .error {
+    position: absolute;
+    right: 5.5rem;
+    font-size: 0.75rem;
+    color: $error;
+    font-weight: 700;
+    display: none;
+  }
+}
+
+// ============
+// profile
+// ============
+
+.main__container {
+  border-radius: 15px;
+  padding: 2rem 1.5rem;
+
+  .gitHub__user--profile {
+    display: flex;
+    gap: 1.1875rem;
+    margin-bottom: 2.125rem;
+
+    .icon img {
+      width: 70px;
+      border-radius: 50%;
+    }
+
+    .user__info {
+      .name {
+        color: $light-mode-name;
+        font-weight: 700;
+      }
+
+      .username {
+        color: $button;
+      }
+
+      .joined {
+        color: $light-mode-grey-text;
+      }
+    }
+  }
+
+  .bio {
+    font-size: 0.8125rem;
+    margin-bottom: 1.4375rem;
+  }
+
+  .stats__container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    background-color: $light-mode-background;
+    padding: 1.125rem 0;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+
+    .stats {
+      .stats__header {
+        font-size: 0.6875rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .stats__total {
+        font-weight: 700;
+        color: $light-mode-name;
+      }
+    }
+  }
+
+  .info__container {
+    font-size: 0.8125rem;
+    color: $light-mode-text;
+
+    .info {
+      display: flex;
+      gap: 1.203125rem;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      a {
+        text-decoration: none;
+        color: $light-mode-text;
+      }
+      .website:hover,
+      .twitter:hover,
+      .company:hover {
+        text-decoration: underline;
+        transition: 0.2s ease-in-out;
+      }
+    }
+
+    .info__location span {
+      padding-left: 0.35rem;
+    }
+  }
+}
+
+// ============
+// footer
+// ============
+.attribution {
+  margin-top: 1em;
+  font-size: 11px;
+  text-align: center;
+
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+
+// ===========
+// color schemes
+// ==========
+
+.light__mode {
+  background-color: $light-mode-background;
+  color: $light-mode-text;
+
+  .header__container {
+    h1 {
+      color: $light-mode-header;
+    }
+    .theme__container {
+      .dark {
+        display: flex;
+      }
+
+      .light {
+        display: none;
+      }
+    }
+  }
+
+  .container {
+    background: $light-mode-container;
+    box-shadow: 0px 6px 9px 0px hsl(219, 48%, 89%);
+  }
+
+  .search__bar {
+    ::placeholder {
+      color: $light-mode-text;
+      opacity: 1;
+    }
+
+    input {
+      background-color: $light-mode-container;
+      color: $light-mode-header;
+    }
+  }
+
+  .main__container {
+    .gitHub__user--profile {
+      .user__info {
+        .name {
+          color: $light-mode-name;
+        }
+
+        .joined {
+          color: $light-mode-grey-text;
+        }
+      }
+    }
+    .stats__container {
+      background-color: $light-mode-background;
+
+      .stats {
+        .stats__total {
+          color: $light-mode-name;
+        }
+      }
+    }
+
+    .info__container {
+      color: $light-mode-text;
+
+      .info {
+        a {
+          color: $light-mode-text;
+        }
+      }
+    }
+  }
+}
+
+.dark__mode {
+  background-color: $dark-mode-background;
+  color: $white;
+
+  .header__container {
+    h1 {
+      color: $white;
+    }
+    .theme__container {
+      .light {
+        display: flex;
+      }
+
+      .dark {
+        display: none;
+        color: $light-mode-header;
+      }
+    }
+  }
+
+  .container {
+    background: $dark-mode-container;
+    box-shadow: none;
+  }
+
+  .search__bar {
+    ::placeholder {
+      color: $white;
+    }
+
+    input {
+      background-color: $dark-mode-container;
+      color: $white;
+    }
+  }
+
+  .main__container {
+    .gitHub__user--profile {
+      .user__info {
+        .name {
+          color: $white;
+        }
+
+        .joined {
+          color: $white;
+        }
+      }
+    }
+    .stats__container {
+      background-color: $dark-mode-background;
+
+      .stats {
+        .stats__total {
+          color: $white;
+        }
+      }
+    }
+
+    .info__container {
+      color: $white;
+
+      .info {
+        a {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+@import "tablet", "light", "dark";
+
+@import "desktop";

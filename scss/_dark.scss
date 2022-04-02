@@ -1,0 +1,70 @@
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: $dark-mode-background;
+    color: $white;
+  }
+
+  .header__container {
+    h1 {
+      color: $white;
+    }
+    .theme__container {
+      .light {
+        display: flex;
+      }
+
+      .dark {
+        display: none;
+      }
+    }
+  }
+
+  .container {
+    background: $dark-mode-container;
+    box-shadow: none;
+  }
+
+  .search__bar {
+    ::placeholder {
+      color: $white;
+    }
+
+    input {
+      background-color: $dark-mode-container;
+      color: $white;
+    }
+  }
+
+  .main__container {
+    .gitHub__user--profile {
+      .user__info {
+        .name {
+          color: $white;
+        }
+
+        .joined {
+          color: $white;
+        }
+      }
+    }
+    .stats__container {
+      background-color: $dark-mode-background;
+
+      .stats {
+        .stats__total {
+          color: $white;
+        }
+      }
+    }
+
+    .info__container {
+      color: $white;
+
+      .info {
+        a {
+          color: $white;
+        }
+      }
+    }
+  }
+}
