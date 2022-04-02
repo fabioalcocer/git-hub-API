@@ -29,7 +29,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution](https://github.com/fabioAlcocer/git-hub-API)
-- Live Site URL: [Live]()
+- Live Site URL: [Live](https://api-github-search.netlify.app/)
 
 ## My process
 
