@@ -14,7 +14,10 @@ This is a solution to the [GitHub user search app challenge on Frontend Mentor](
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
-## Overview
+## Preview
+### Screenshot
+
+![](./assets/preview.jpg)
 
 ### The challenge
 
